@@ -12,52 +12,105 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-}
-
-header{
-    background: salmon;
+    font-size: 16px;
 }
 
 .container {
-    background: seagreen;
     height: 100vh;
     width: 100vw;
 }
 
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.name {
+    background: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5rem;
+    color: #000;
+    box-shadow: rgb(194, 194, 194) 3px 3px 6px 0px inset, rgba(140, 140, 140, 0.5) -3px -3px 6px 1px inset;
+}
+
 .book-cards {
     background: dodgerblue;
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin-top: 1.2rem;
+    height: auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
 }
 
 .card {
-    border: 1px solid red;
     height: 30vh;
-    width: 15%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 14px;
+    background: #929292;
+    box-shadow: rgba(0, 0, 0, 0.495) 0px 3px 8px;
+    margin: 0.7rem;
 }
 
-.heading{
+.heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.book-title{
-    font-size: 1.4rem;
+.book-title {
+    font-size: 1.6rem;
+    font-family:'Times New Roman', Times, serif;
 }
 
-.btn a img{
+.btn a img {
     width: 25px;
+    border-radius: 100px;
+    background-color: #fff;
+    padding: 0.4rem;
+    transition: 0.5s ease-in-out transform;
+    margin-right: 0.2rem;
 }
 
-.divider{
+.btn a img:hover {
+    transform: scale(1.1);
+}
+
+.divider {
     height: 2px;
     width: 100%;
     background: rgb(0, 0, 0);
+}
+
+.author,
+.page,
+.read {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.author span,
+.page span {
+    font-size: 1rem;
+    padding-left: 0.25rem;
+}
+
+
+.read-box input[type="radio"] {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
 }
