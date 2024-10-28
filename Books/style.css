@@ -1,18 +1,17 @@
 * {
     padding: 0;
     margin: 0;
-    outline: none;
     text-decoration: none;
     list-style: none;
-    color: #fff;
+    border: 0;
+    box-sizing: border-box;
 }
 
-html,
-body {
-    box-sizing: border-box;
+html, body {
     width: 100%;
     height: 100%;
     font-size: 16px;
+    background: dodgerblue;
 }
 
 .container {
@@ -28,6 +27,89 @@ header {
     background: black;
 }
 
+.book{
+    transition: 0.3s ease-out transform;
+}
+
+.book:hover{
+    transform: scale(1.1);
+}
+
+.form-box {
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    display: none;
+}
+
+.dialogBox{
+    display: block;
+}
+
+.close.btn {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: 0.3s ease-in-out background-color;
+}
+
+.close.btn:hover{
+    background-color: #dd3030;
+}
+
+fieldset {
+    border: none;
+    margin: 15px 0;
+}
+
+.form-box form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.submit.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.submit.btn:hover {
+    background-color: #0056b3;
+}
+
 .name {
     background: #fff;
     font-family: 'Courier New', Courier, monospace;
@@ -37,47 +119,49 @@ header {
 }
 
 .book-cards {
-    background: dodgerblue;
     height: auto;
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    align-items: center;
+    gap: 10px;
+    padding: 20px;
 }
 
 .card {
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 14px;
-    background: #929292;
-    box-shadow: rgba(0, 0, 0, 0.495) 0px 3px 8px;
-    margin: 0.7rem;
+    background: #fff;
+    border: 1px solid blue;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.heading *,.details * {
+    color: #000;
 }
 
 .heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .book-title {
-    font-size: 1.6rem;
-    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.btn a img {
-    width: 25px;
+.icon a img {
+    width: 28px;
     border-radius: 100px;
-    background-color: #fff;
+    background-color: #ff5c5c;
     padding: 0.4rem;
     transition: 0.5s ease-in-out transform;
     margin-right: 0.2rem;
 }
 
-.btn a img:hover {
+.icon a img:hover {
     transform: scale(1.1);
 }
 
@@ -85,32 +169,52 @@ header {
     height: 2px;
     width: 100%;
     background: rgb(0, 0, 0);
+    margin: .5rem 0 0.25rem;
 }
 
-.author,
-.page,
-.read {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
+.details {
+    padding: 0.5rem 0;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
-.author span,
-.page span {
+.details p {
+    margin: 0.5rem 0;
     font-size: 1rem;
-    padding-left: 0.25rem;
+}
+
+.details p span {
+    font-weight: bold;
+    color: #555;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status label {
+    margin-right: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.status input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 0.2rem;
 }
 
 
-.read-box input[type="radio"] {
-    display: inline-block;
-    padding: 8px 16px;
-    margin: 0 5px;
-    cursor: pointer;
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    color: #007bff;
-    font-weight: bold;
-    transition: all 0.3s;
-    font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 768px) {
+    .book-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .book-cards {
+        grid-template-columns: 1fr;
+    }
 }
