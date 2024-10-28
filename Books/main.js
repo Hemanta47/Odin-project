@@ -15,6 +15,12 @@ class Book {
 function addBookToLibrary(title, author, pages, read) {
     const newBook = new Book(title, author, pages, read)
     myLibrary.push(newBook);
+
+    displayCard(myLibrary);
+}
+
+function deleteBookFromLibrary(index) {
+    myLibrary.splice(index, 1);
     displayCard(myLibrary);
 }
 
@@ -28,8 +34,8 @@ function displayCard(arr) {
                 <div class="heading">
                     <p class="book-title">${book.title}</p>
                     <div class="icon">
-                        <a><img src="icon/edit.svg" alt="Edit Book" width="60px"></a>
-                        <a><img src="icon/delete.svg" alt="Delete Book" width="60px"></a>
+                        <a class="edit-book" data-index="${index}"><img src="icon/edit.svg" alt="Edit Book" width="60px"></a>
+                        <a class="delete-book" data-index="${index}"><img src="icon/delete.svg" alt="Delete Book" width="60px"></a>
                     </div>
                 </div>
                 <div class="divider"></div>
@@ -42,6 +48,19 @@ function displayCard(arr) {
                 </div>
             </div>
         `
+    });
+
+    document.querySelectorAll('.delete-book').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            const index = e.currentTarget.getAttribute('data-index');
+            deleteBookFromLibrary(index);
+        });
+    });
+
+    document.querySelectorAll('.edit-book').forEach((button) => {
+        button.addEventListener('click', (e) => {
+            alert('Under construction')
+        });
     });
 }
 
@@ -59,6 +78,7 @@ form.addEventListener('submit', function (e) {
 })
 
 
+
 const dialog = document.querySelector('.form-box');
 
 document.getElementById('close').addEventListener('click', (e) => {
@@ -66,5 +86,6 @@ document.getElementById('close').addEventListener('click', (e) => {
 });
 
 document.getElementById('open').addEventListener('click', (e) => {
-    dialog.classList.add('dialogBox'); 
+    dialog.classList.add('dialogBox');
 });
+
