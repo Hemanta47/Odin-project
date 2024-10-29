@@ -1,0 +1,142 @@
+:root {
+    --cell-size: 80px;
+    --color: #81c3fd;
+    --color-set: #0275d8;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main{
+    padding: .5rem;
+    border: 1px solid black;
+    background: #0275d8;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.top{
+    margin-bottom: 2rem;
+}
+
+.top h1{
+    font-size: 2.5rem;
+}
+
+.players{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.player{
+    color: #000;
+    padding: .25rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: #fff;
+}
+
+.player img{
+    width: 22px;
+}
+
+.player.active{
+    color: rgb(13, 189, 57);
+    background-color: #000000;
+    border-color: #fff;
+}
+
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid #000000;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:hover{
+    background-color: #cacabd;
+}
+
+.cell img{
+    width: 60px;
+}
+
+#status{
+    background: #0c7b0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d6f10e;
+}
+
+#restartButton{
+    padding: 0.4rem;
+    background: #b32727;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: medium;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    transition: all 0.3s;
+}
+
+#restartButton:hover{
+    transform: scale(1.1);
+    background: #9f0a0a;
+}
