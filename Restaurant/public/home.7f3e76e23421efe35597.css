@@ -1,0 +1,157 @@
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/global.css ***!
+  \******************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap);
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/global.css (1) ***!
+  \**********************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap);
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/global.css (2) ***!
+  \**********************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    width: 100%;
+}
+
+.navBar,
+.list, footer{
+    display: flex;
+    align-items: center;
+}
+
+.navBar {
+    background: black;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem;
+    color: #fff;
+    height: 16%;
+}
+
+.logo {
+    width: 30%;
+    font-size: 3rem;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.list {
+    width: 40%;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.list li {
+    font-size: 1.2rem;
+    font-weight: light;
+    padding: 0.2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.list li a {
+    color: #fff;
+}
+
+.list li::after {
+    content: "";
+    position: absolute;
+    background: rgb(22, 89, 214);
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    border-radius: 4px;
+    width: 0;
+}
+
+.list li:hover::after {
+    animation: line 1s linear forwards;
+}
+
+.list a.active {
+    color: rgb(208, 74, 74);
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-blend-mode: darken;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    height: 6%;
+    justify-content: center;
+}
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/pages/home/home.css ***!
+  \***************************************************************************/
+.deal {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 30px;
+}
+
+.text {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.menu-btn {
+    background: dodgerblue;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.menu-btn:hover {
+    background: rgb(9, 83, 157);
+    transform: translateY(-2px);
+    box-shadow: rgba(255, 255, 255, 0.329) 0px 1px 1px, rgba(255, 255, 255, 0.329) 0px 2px 2px, rgba(255, 255, 255, 0.329) 0px 4px 4px, rgba(255, 255, 255, 0.329) 0px 8px 8px, rgba(255, 255, 255, 0.329) 0px 16px 16px;
+}
+
+main{
+    background: #00000072 url(assets/bg0aad54a1e9132443d158.jpg) center / cover no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 74%;
+}
