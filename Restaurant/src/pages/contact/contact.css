@@ -1,0 +1,30 @@
+main{
+    background: #00000072 url('../../assets/contact.jpg') center / cover no-repeat;
+    height: 76%;
+    align-items: center;
+}
+
+main,.info{
+    display: flex;
+    justify-content: center;
+}
+
+
+.info{
+    height: auto;
+    background: #fff;
+    flex-direction: column;
+    padding: 0.25rem;
+    border-radius: 10px;
+}
+
+.info p{
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: dodgerblue;
+}
+
+.info p span{
+    font-size: 1.2rem;
+    color: #000;
+}

@@ -1,0 +1,61 @@
+main {
+    background: #00000072 url('../../assets/menu.jpg') center center / cover no-repeat;
+    padding: 10px 0;
+}
+
+.menus {
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+}
+
+.menu {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0.5rem;
+}
+
+.menu img {
+    width: 100%;
+    height: 50%;
+}
+
+.food_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.original_price,
+.offer_price {
+    font-weight: bold;
+    color: green;
+}
+
+.original_price {
+    text-decoration: line-through;
+    color: red;
+    margin-left: .5rem;
+}
+
+
+.order-btn {
+    margin-right: 1rem;
+    background: dodgerblue;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border: 1px solid wheat;
+    border-radius: 15px;
+    font-size: .9rem;
+}

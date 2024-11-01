@@ -1,0 +1,37 @@
+.deal {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 30px;
+}
+
+.text {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.menu-btn {
+    background: dodgerblue;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.menu-btn:hover {
+    background: rgb(9, 83, 157);
+    transform: translateY(-2px);
+    box-shadow: rgba(255, 255, 255, 0.329) 0px 1px 1px, rgba(255, 255, 255, 0.329) 0px 2px 2px, rgba(255, 255, 255, 0.329) 0px 4px 4px, rgba(255, 255, 255, 0.329) 0px 8px 8px, rgba(255, 255, 255, 0.329) 0px 16px 16px;
+}
+
+main{
+    background: #00000072 url('../../assets/bg.jpg') center / cover no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 74%;
+}
