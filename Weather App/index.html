@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main flex justify align">
+        <h1 class="app_name">WEATHER APP</h1>
+        <div class="city flex align">
+            <input type="text" name="city_name" id="city_name" placeholder="Enter city name">
+            <button class="city_name_search"><img src="./assets/search.png" alt="search.png"></button>
+        </div>
+    </div>
+
+    <div class="results" style="display: none;">
+
+        <div class="left flex column justify align">
+            <button class="back-btn">
+                <img src="./assets/back.png" alt="back.png">
+            </button>
+            <img src="./assets/clear.png" alt="sun" class="icon">
+
+            <div class="location flex align">
+                <h2 contenteditable="false" class="city-name"></h2>
+                <button class="edit-icon">
+                    <img src="./assets/edit.png" alt="edit.png">
+                </button>
+            </div>
+
+            <div class="details">
+                <p class="weather-description">
+                </p>
+                <p class="temperature"></p>
+                <div class="other flex align">
+                    <div class="humidity">
+                        <div class="flex justify align mesure"><span class="humidity_VALUE"></span><img
+                                src="./assets/humidity.png" alt="humidity.png"></div>
+                        <p class="type">Humidity</p>
+                    </div>
+                    <div class="wind">
+                        <div class="flex justify align mesure"><span class="wind_VALUE"></span><img
+                                src="./assets/wind.png" alt="wind.png"></div>
+                        <p class="type">Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            
+        </div>
+
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
